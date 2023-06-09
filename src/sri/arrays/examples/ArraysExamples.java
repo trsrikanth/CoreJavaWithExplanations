@@ -94,11 +94,11 @@ public class ArraysExamples {
             }
 
         }
-
+        return unSortedArray;
         }
 
-        return numbers;
-    }
+
+
 
     public static int[] getRandomArray(int length){
         Random random = new Random();
