@@ -1,4 +1,4 @@
-package sri.polymorphism.example;
+package sri.examples.polymorphism;
 
 public class Movie {
     private String title;

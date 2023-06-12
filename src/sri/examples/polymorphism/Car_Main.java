@@ -1,4 +1,4 @@
-package sri.polymorphism.example;
+package sri.examples.polymorphism;
 
 public class Car_Main {
     public static void main(String[] args) {

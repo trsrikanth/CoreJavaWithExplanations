@@ -1,4 +1,4 @@
-package sri.arrays.examples;
+package sri.examples.arrays;
 
 import java.util.Scanner;
 
