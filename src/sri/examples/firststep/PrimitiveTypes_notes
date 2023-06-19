@@ -1,0 +1,24 @@
+In Java, primitive types are the most basic data types.
+
+There are eight primitive data types in Java
+
+Whole numbers : byte,short,int,long.
+Real numbers : float,double.
+Single char : char
+boolean value : boolean
+
+Consider these types as the building blocks of data manipulation.
+Remember that primitive data types are simply placeholders in memory for a value.
+
+An integer is a whole number, meaning it doesn't contain a fractional element, or a decimal.
+There's a specified range of values allowed for the int, which is true for most data types.
+What this means is, that the allowable range of values is NOT infinite.
+There's a defined minimum, and maximum value, for each numeric data type,
+meaning you can't assign a number bigger or smaller (outside of that range).
+
+Java uses the concept of a wrapper class, for all of its eight primitive data types.
+A wrapper class provides simple operations, as well as some basic information about the primitive data type,
+which cannot be stored on the primitive itself.
+We saw that MIN_VALUE, and MAX_VALUE, are elements of this basic information, for the int data type.
+
+Casting means to treat or convert a number, from one type to another.

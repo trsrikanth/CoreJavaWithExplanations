@@ -1,0 +1,69 @@
+A keyword is any one of a number of reserved words, that have a predefined meaning in the Java language.
+In Java syntax, all code is case-sensitive, and this includes keywords.
+
+Here, an int, (all in lowercase) is a keyword in Java. Let's take a quick look at all the Java keywords.
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html
+
+If we want to start getting the computer to do something useful, we need to start using variables.
+So what are variables? Well, variables are a way to store information in our computer.
+Variables that we define in a program, can be accessed by a name we give them,
+and the computer does the hard work,of figuring out where they get stored,
+in the computer's random access memory, or ram.
+
+Now a variable, as the name suggests, can be changed – in other words, its contents are variable.
+So what we have to do, is tell the computer what type of information we want to store in the variable,
+and then give the variable a name.
+
+There are lots of different types of data, that we can define for our variables,
+some of which I've shown you in the keyword list previously Collectively, these are known as data types.
+
+As you may have guessed, some data types are keywords in Java. When we get to the Object Oriented features of Java,
+you will see that we have a lot of flexibility for creating our own data types, for now,
+we'll explore primitive data types, which are built into the Java language.
+
+So let's start out by defining a variable of type int, int being an abbreviation for integer,
+which is a whole number, that's a number without any decimal points.
+
+To define a variable, we need to specify the data type, then give our variable a name,
+and optionally add an expression, to initialize the variable with a value.
+
+And we'll be talking about expressions shortly.
+
+int myFirstNumber=5;
+
+We've defined our first variable – by specifying a data type of int,
+and giving the variable the name of myFirstNumber.
+
+We've set the value to the number 5, using an equals sign – this is called an equals operator.
+Remember that the data type 'int', represents an integer value which is a whole number.
+And finally, we added that semi-colon to end the line, to form a statement.
+The semi-colon ends the line and tells Java, just that – that the line is complete.
+
+Here, this statement is a specific type of statement – a declaration statement.
+A declaration statement is used to define a variable by indicating the data type,
+and the name, then optionally to set the variable to a value.
+
+So here, the type of the variable — note that type is a shortcut for the word data type — is an int.
+
+The name of this variable is myFirstNumber,
+and the value we're assigning or initializing our new variable to is five.
+
+we're declaring a variable of type int, with the name myFirstNumber, and assigning it the value of five.
+
+Java knows what part of the statement is a java keyword, and what part is a variable name, etc.
+Assigning a value in this statement (or initialization), is optional here; in other words,
+we could've omitted the equals five. With Java, in general, variables have to be initialized before being used,
+
+What's happened behind the scenes, is that Java has allocated a place in memory, to store a single whole number,
+and set up a mechanism, to allow us to access that memory location, by the name we gave it,
+in this case, myFirstNumber. That's how we'll access it.
+
+So in other words, you don't need to know anything about where in memory this is taking place,
+or where Java is storing the contents. To access the number, you don't refer to a memory location,
+you refer to a variable name, myFirstNumber in this case. So we're leaving Java, to do all the dirty work.
+
+System.out.println("Hello world");
+
+"Hello world" is a string literal, has to be included in a set of double quotes.
+Now a literal, unlike a variable, cannot be changed – a literal is the simplest form of an expression,
+and not a variable.
