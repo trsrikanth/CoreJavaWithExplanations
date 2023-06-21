@@ -4,11 +4,17 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+/*
+An array is a data structure, that allows you to store a sequence of values, all of the same type.
+you can have arrays for any primitive type, like ints, doubles, booleans etc..
+Array is a special class in java.
+ */
 public class ArraysExamples {
 
     public static void main(String[] args) {
+        arrayDeclarations();
         basicArraysInstantion();
-        arrayInitilizer();
+        arrayInitializer();
         arraysStartIndexingFromZero();
 
         basicArraysIterationAndInitilization();
@@ -24,6 +30,8 @@ public class ArraysExamples {
         twoDiArraysPrinting();
 
     }
+
+
 
     private static void arraysUtilClass(){
         int[] numbers = {4,5,6,7,8,9,2};
@@ -60,7 +68,12 @@ public class ArraysExamples {
 
         String [] sArray={"hi","cow","god","love","ultimate"};
         Arrays.sort(sArray);
-        if(Arrays.binarySearch(sArray,"cow")>=0){
+        // to use binary search it needs to have these
+        // 1. Array has to be sorted
+        // 2. duplicate values no guarantee which one will match
+        // 3. elements must be comparable and trying to compare elements of different types may lead to
+        // errors and invalid results.
+        if(Arrays.binarySearch(sArray,"cow")>=0){ // returns the position of the match if found.
             System.out.println("Cow found in the list");
         }
 
@@ -140,42 +153,42 @@ public class ArraysExamples {
     }
     private static void basicArraysInstantion(){
 
-        int[] myIntArray = new int[10];
+        int[] myIntArray = new int[10]; // you can't change the size of an array after its instantiated.
         myIntArray[5] = 60;
 
         double[] myDoubleArray = new double[10];
         myDoubleArray[2] = 3.5;
-        System.out.println( myDoubleArray[2]);
+        System.out.println( myDoubleArray[2]); //print 3rd element. index starts at 0
     }
 
-    private static void arrayInitilizer(){
+    private static void arrayInitializer(){
         int [] firstFivePositive = new int[]{1,2,3,4,5};
 
-        int [] newFirstFivePositives = {1,2,3,4,5}; // anonymous array initilizer
+        int [] newFirstFivePositives = {1,2,3,4,5}; // anonymous array initializer
 
-        String [] names = {"Srikanth","Reddy","charles","Akbar","siddhu"}; // anonymous array initilizer
+        String [] names = {"Srikanth","Reddy","charles","Akbar","siddhu"}; // anonymous array initializer
 
         int[] newArray;
-        //newArray ={6,8,6,9}; // array initilizer not allowed hear
+        //newArray ={6,8,6,9}; // array initializer not allowed hear
 
     }
 
     private static void stringSplitExample(){
         String[] splitStrings = "Hello world again".split(" ");
         System.out.println(("_".repeat(20)));
-        printUsingVaribleArgsExample(splitStrings);  //passing array
+        printUsingVariableArgsExample(splitStrings);  //passing array
         System.out.println(("_".repeat(20)));
-        printUsingVaribleArgsExample("Hello" , "World","Example"); // passing independent strings
+        printUsingVariableArgsExample("Hello" , "World","Example"); // passing independent strings
         System.out.println(("_".repeat(20)));
-        printUsingVaribleArgsExample(); // without any arguments also it works.
+        printUsingVariableArgsExample(); // without any arguments also it works.
 
         String [] sArray={"first","second","third","fourth"};
-        printUsingVaribleArgsExample(String.join(",",sArray)); //printing single string.
+        printUsingVariableArgsExample(String.join(",",sArray)); //printing single string.
 
 
 
     }
-    private static void printUsingVaribleArgsExample(String ... strings){
+    private static void printUsingVariableArgsExample(String ... strings){
         //There can be only one varible argument in a method
         // The varible argument must be the last argument.
 
@@ -298,6 +311,12 @@ public class ArraysExamples {
         }
 
         System.out.println(Arrays.deepToString(array2));
+    }
+
+    private static void arrayDeclarations() {
+        int [] integerArray;
+        String [] nameList;
+        String courseList[];
     }
 
 }

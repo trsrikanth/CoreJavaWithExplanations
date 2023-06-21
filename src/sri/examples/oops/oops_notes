@@ -1,0 +1,127 @@
+Object oriented programming is a way to model real world objects, as software objects,
+which contains both data and code.
+Classes are fundamental component of Object oriented programming.
+Class based programming starts with classes, which becomes blueprints for objects.
+What are objects?
+So what I'd like you to do, is just have a look around, in the area, you're sitting in right now.
+And if you do that, you'll find that there's many examples of real-world objects.
+For example, I'm sitting here and I can see: a computer; I can see a keyboard
+I can see a microphone; I can see shelves on the wall; I can see a door.
+All of these are examples of real-world objects.
+
+Now, Real world objects have two major components: state; and behavior.
+So State, in terms of a computer object, might be: the amount of RAM it has; the operating system
+it's running; the hard drive size; the size of the monitor
+
+These are characteristics about the item, that can describe it. We could also describe animate objects,
+like people or animals, or even insects, like an ant. For an ant, the state might be:
+the age; the number of legs; the conscious state; whether the ant is sleeping or is awake.
+
+In addition to state, objects may also have behavior, or actions that can be performed by the object,
+or upon the object. Behavior, for a computer, might be things like: booting up; shutting down;
+beeping, or outputting some form of sound; drawing something on the screen, and so on.
+All of these could be described as behaviors for a computer. For an ant, behavior might be: eating; drinking;
+fighting; carrying food, those types of things.
+
+So modelling real world objects as software objects, is a fundamental part of Object Oriented Programming.
+
+Now, A software object stores its state in fields, which can also be called variables, or attributes.
+And Objects expose their behavior with methods, which we've talked about before. So, where does a class fit in?
+Well, think of a class as a template, or a blueprint for creating objects.
+
+Let's take another look at the class.
+The class describes the data (fields), and the behavior (methods), that are relevant to the
+real-world object we want to describe. These are called class members. A class member can be
+a field or a method, or some other type of dependent element.
+
+If a field is static, there is only one copy in memory, and this value is associated with the class,
+or template, itself.
+If a field is not static, it's called an instance field, and each object may have a different value
+stored for this field. A static method can't be dependent on any. one object's state,
+so it can't reference any instance, members. In other words, any method that operates on instance fields,
+needs to be non-static. So these class or member fields, can be thought of as variables,
+though it's more common to call them fields or attributes.
+
+When you're creating classes in Java, the first letter should be an upper case letter.
+
+So, first thing what I want you to notice is, this public class Car.
+So, that's actually the statement to create a new class with the name Car.
+Now, the public keyword is an access modifier. This lets us determine what access others will have to this
+new class that we're creating. We haven't talked about how classes are organized,
+so let's just look at that briefly, before we talk about access.
+
+Classes can be organized into logical groupings, which are called packages. You declare a
+package name in the class using the package statement.
+If you don't declare a package, the class implicitly belongs to the default package.
+
+A class is said to be a top-level class, if it is defined in the source code file,
+and not enclosed in the code block of another class, type, or method.
+A top-level class has only two valid access modifier options: public, or none.
+So the word public gives unrestricted access to a class.
+public means any code can access this class.
+
+Java by default implicitly allows package-private access. This means that classes grouped into the same package,
+ can access the class.
+
+So remember that a class is a blueprint for an object, that we're going to be creating.
+
+Now to date, you've seen variables used inside a method or code block.
+And these were called local variables, because they were local to, or actually belonged to,
+that method or code block. But, we couldn't access those local variables outside of the method,
+or block, we declared them. Classes allow us to create variables that can be seen, or are accessible,
+by any code block within that class. But we can also allow access from outside the class itself.
+
+When we're designing our class, there are some things we want the public to know, and some things
+that aren't necessary for the public to know. We can have a public interface.
+This is only the information the outside world needs to know, to use our class.
+
+But we'll also have a non-public interface. This is information we may want to share but not always,
+and not with everyone. We may need to share some information with our own company and other departments,
+while other data might need to be shared with our manufacturers and dealers, but not with the public.
+
+Java gives us the ability to have this kind of control, by specifying different access modifiers for each member in a class.
+An access modifier at the member level, allows granular control over class members.
+
+The valid access modifiers are shown in this table from the least restrictive, to the most restrictive.
+
+Here, you can see that public is still an option for class members, like it was for the class,
+and this means there is unrestricted access to the member.
+We also still have no modifier, which means package, or package-private by default,
+so that any class in the same package, can access this member.
+
+We could also use private, which is basically the opposite of public, and that's where no code, outside the class,
+can use this field or method. And finally, there's the protected modifier.
+This one also allows package access, but it also permits subclasses to access this member.
+
+As a general rule, all your fields should be private, unlike the class, where we'll usually use public.
+So why would we want to make all the fields on a class private?
+Doesn't this mean that nobody can access them? This practice has a name, encapsulation,
+and it's a key fundamental rule of Object Oriented Programming.
+
+Encapsulation in Object Oriented Programming usually has two meanings.
+One is the bundling of behavior and attributes on a single object.
+
+The other is the practice of hiding fields, and some methods, from public access.
+In general, when we talk about encapsulation, we're talking about information hiding,
+or hiding the internal workings of a particular object.
+
+When we make our attributes private, we can then create methods to access the data,
+each with different degrees of access allowed, as needed.
+
+We'll add some fields, which are characteristics of the car. So what kind of things might you be interested in,
+when describing a car?
+Maybe things like the make or manufacturer, the model, its color, how many doors does it have,
+is it a convertible? So let's add these fields, then we'll talk a little about them.
+
+These are fields, because they are defined in the class's code block, or the body of the class,
+and not in a method. When we create an object from this class, then the values we assign to these fields
+represent the state of the object.
+Unlike local variables, class variables should have some type of access modifier declared for it.
+If you don't declare one, Java declares the default one (package private), implicitly.
+
+The other thing you might have noticed is that we're not actually assigning any values yet.
+This is because, at this point, we don't know what these values might be, and they'll likely
+be different for each instance anyway.
+
+Methods, unlike fields, will often be public, because we want to give users away to interact with the object.
+

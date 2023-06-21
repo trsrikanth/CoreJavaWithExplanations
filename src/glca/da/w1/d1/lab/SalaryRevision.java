@@ -14,7 +14,7 @@ public class SalaryRevision {
 			
 //		2. Initialize variable
 			salary = 600000;
-			rating = 2;
+			rating = 5;
 			
 //		3. ImplementSwitch case
 			switch(rating) {
