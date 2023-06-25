@@ -1,0 +1,6 @@
+Its important to understand that Collections class is not the Collections Framework.
+The framework contains many interfaces and implemented classes, as well as helper classes,
+which this Collections class is just one example. At one time, Java had interfaces, but no support
+for static or default methods on them, so useful methods were packaged in these helper classes.
+Some of these methods have since been implemented on the interfaces themselves,
+but there's still some functionality on the Collections class you might find useful.

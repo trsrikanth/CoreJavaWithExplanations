@@ -1,0 +1,27 @@
+We use the  words, reference, object, instance and class,
+quite a lot when talking about Java code. These new concepts may well be confusing at first.
+We will discuss exactly what each of these words  means, in the context of Java programming.
+
+
+Let's use the analogy of building  a house to understand classes.
+Now A class is basically  a blueprint for the house.
+Using the blueprint, we can build as many  houses as we like, based on those plans.
+
+
+So thinking back to the physical world, we  use the plans for the house, to build many
+houses that have the same floor plan. Each house we build (in other words (going back to programming terms),
+each house we  instantiate using the new operator) is an object. This object can also be known as an instance,
+often we'll say it's an instance of the class. So we would have an instance  of house in this example.
+
+Getting back to the physical  world, Each house we build has  an address ( it's built at a physical location)
+In other words, if we want to tell someone where  we live, we give them our address
+(perhaps written  on a piece of paper). So that piece of paper, with  the address on it,
+This is known as a reference.
+
+Now We can copy that reference as many times as we like, but there is still just  one house that we're referring to.
+In other words, we're copying the paper that  has the address on it, not the house itself.
+Or we're writing that address on another  piece of paper. Now back to programming terms,
+We can pass references as parameters  to constructors and methods.
+
+Let's now just go a bit deeper, to  make this a little bit more clearer.
+

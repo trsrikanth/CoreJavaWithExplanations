@@ -63,7 +63,7 @@ package glca.da.w1.d3.lab;
 	8. (Optional) Replace static with final for var2 and run the program. Note your observations.
  */
 
-public class StaticAndFinal {
+public class    StaticAndFinal {
 	
 //	1. Declare and initialize variables
 	int var1 = 10;
