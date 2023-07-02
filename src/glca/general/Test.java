@@ -15,8 +15,25 @@ public class Test {
         }
 
 
-        for(int i=20;i>0;i--){
-            System.out.println(" ".repeat(i)+"*".repeat(20-i));
+        for(int i=5;i>0;i--){
+            System.out.println(" ".repeat(i)+"*".repeat(5-i));
+        }
+
+        //printing v
+
+        int nuberofRows=12;
+        int numberofCols=(nuberofRows*2)-1;
+
+        System.out.println("*".repeat(numberofCols));
+        for(int rowCount=0;rowCount<nuberofRows;rowCount++){
+            for(int columnCount=0;columnCount<numberofCols;columnCount++){
+                if((rowCount==columnCount)||( columnCount==(numberofCols-rowCount-1))){
+                    System.out.print("*");
+                }else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
         }
     }
 

@@ -3,7 +3,7 @@ package sri.examples.collections.sets_maps.basic_setup;
 import java.util.*;
 
 public class ContactData {
-    private static final String phoneData= """
+    private static final String phoneData1= """
             Nandam Akhila,99472314010
             Nandam Akhila,99472314009
             Nandam Akhila,99472314008
@@ -39,7 +39,7 @@ public class ContactData {
             Kundrapu Vijayababu,9947231430
             Akkapally Vinod,9947231431
             """;
-    private static final String emailData= """
+    private static final String emailData1= """
             Nandam Akhila,Nandam_Akhila1@gmail.com
             Nandam Akhila,Nandam_Akhila2@gmail.com
             Nandam Akhila,Nandam_Akhila3@gmail.com
@@ -74,6 +74,26 @@ public class ContactData {
             Saurabh Mani Tripathi,Saurabh_Mani_Tripathi@gmail.com
             Kundrapu Vijayababu,Kundrapu_Vijayababu@gmail.com
             Akkapally Vinod,Akkapally_Vinod@gmail.com
+            """;
+
+    private static final String phoneData= """
+            Charlie Brown, 3334445555
+            Maid Marion, 1234567890
+            Mickey Mouse, 9998887777
+            Mickey Mouse, 1247489758
+            Minnie Mouse, 4567805666
+            Robin Hood, 5647893000
+            Robin Hood, 7899028222
+            Lucy Van Pelt, 5642086852
+            Mickey Mouse, 9998887777
+            """;
+    private static final String emailData= """
+            Mickey Mouse, mckmouse@gmail.com
+            Mickey Mouse, micky1@aws.com
+            Minnie Mouse, minnie@verizon.net
+            Robin Hood, rhood@gmail.com
+            Linus Van Pelt, lvpelt2015@gmail.com
+            Daffy Duck, daffy@google.com
             """;
     public static List<Contact> getData(String type){
         List<Contact> dataList=new ArrayList<>();

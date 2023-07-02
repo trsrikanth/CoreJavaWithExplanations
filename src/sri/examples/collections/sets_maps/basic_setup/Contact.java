@@ -58,10 +58,14 @@ public class Contact {
         return getName().equals(contact.getName());
     }
 
+
+
     @Override
     public int hashCode() {
         return 33*getName().hashCode();
     }
+
+
 
     public void addEmail(String companyName){
         String []names=name.split(" ");
@@ -75,6 +79,7 @@ public class Contact {
     }
 
     public void replaceEmailIfExists(String oldEmail,String newEmail){
+        // replace all not present in set interface
         if(emails.contains(oldEmail)){
             emails.remove(oldEmail);
             emails.add(newEmail);

@@ -54,7 +54,7 @@ public class SampleCollectionsMethods {
         existing destination list, vs.a copy of the list being made.
          */
         Collections.copy(cards,kingsOfClubs);
-        Card.printDeck(cards,"Card Collection with kings copied",1);
+        Card.printDeck(cards,"Card Collection with kings copied",2);
 
         /*
         If you want a full list copy, you'd use the List dot copy of method, so let me revisit
@@ -89,7 +89,7 @@ public class SampleCollectionsMethods {
         Card.printDeck(tens,"Tens in deck",1);
 
         int subListIndex=Collections.indexOfSubList(deck,tens);
-        System.out.println("Sublist index for tens"+subListIndex);
+        System.out.println("Sublist index for tens "+subListIndex);
         System.out.println("Contains = "+deck.containsAll(tens));
 
         boolean disjoint=Collections.disjoint(deck,tens);

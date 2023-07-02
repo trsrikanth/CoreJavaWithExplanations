@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public record Card(Suit suit, String face, int rank) {
+public record Card(Suit suit, String face, int rank) {//using record gives us built in immutability
     public enum Suit{
         CLUB,DIAMOND,HEART,SPADE;
         public char getImage(){

@@ -2,7 +2,7 @@ package sri.examples.abstraction.abstractClass;
 
 import java.util.ArrayList;
 
-public class Main {
+public class   Main {
     public static void main(String[] args) {
         //Animal animal = new Animal("animal","big",100); // we cannot instantiate abstract class
         Dog dog = new Dog("Wolf","big",100);

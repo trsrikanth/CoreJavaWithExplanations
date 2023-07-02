@@ -51,6 +51,7 @@ public class SalaryRevision {
 			default:
 				percentageIncrement = 0;
 			}
+
 			
 //		4. Calculate updated salary
 			updatedSalary = salary +(salary*percentageIncrement)/100;

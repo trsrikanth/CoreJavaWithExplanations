@@ -52,13 +52,19 @@ public class Set_HasSet_BasicOperations {
         printData("Phone contacts",phoneContacts);
         printData("Email contacts",emailContacts);
 
-        int index=emails.indexOf(new Contact("LOKESH BAILAPUDI"));
-        Contact lokesh=emails.get(index);
-        lokesh.addEmail("NetCracker Technologies");
-        lokesh.addEmail("NetCracker Technologies");
-        lokesh.replaceEmailIfExists("LBAILAPUDI@netcrackertechnologies.com",
-        "LBAILAPUDI@netcrackertechnologies.org");
-        System.out.println(lokesh);
+        int index=emails.indexOf(new Contact("Robin Hood"));
+        Contact robinHood=emails.get(index);
+        robinHood.addEmail("Sherwood Forest");
+        robinHood.addEmail("Sherwood Forest");
+        robinHood.replaceEmailIfExists("RHood@sherwoodforest.com",
+        "RHood@sherwoodforest.org");
+        System.out.println(robinHood);
+
+        //Bulk operations
+        // When you are trying to understand data in multiple sets, you might want to get the data that's
+        // in all sets, that's in every set, or the data where there is no overlap.
+        // The collection interface's bulk operations (addAll,retainAll,removeAll and containAll) can be
+        // used to perform these set operations.
 
         // set union
         Set<Contact> unionAB=new HashSet<>();
@@ -66,22 +72,61 @@ public class Set_HasSet_BasicOperations {
         unionAB.addAll(phoneContacts);
         printData("(A \u222A B) Union of emails (A) with phones (B)",unionAB);
 
-        //intersect
+        //intersect AB
         Set<Contact> intersectAB=new HashSet<>(emailContacts);
         intersectAB.retainAll(phoneContacts);
         printData("(A \u2229 B) Intersect emails (A) with phones (B)",intersectAB);
 
 
+        //intersect BA
+        Set<Contact> intersectBA=new HashSet<>(phoneContacts);
+        intersectBA.retainAll(emailContacts);
+        printData("(B \u2229 A) Intersect phones (A) with email (B)",intersectBA);
+        //The ability to evaluate sets, A intersect B and get the same result as B intersect A,
+        //means that the intersect operation is a symmetric set operation.
+        //Union is also a symmetric operation. It doesn't matter if you do A Union B,
+        //or B union A, the final set of elements will all be the same set of names.
+
+
+
         // A - B
+
+        //Another useful evaluation might be to identify which elements are in one set, but not the other.
+        //This is called a set difference.
+        //A difference subtracts elements in common from one set and another,
+        //leaving only the distinct elements from the first set as the result.
+        //This is an asymmetric operation because if we take Set A and subtract Set B from it,
+        //we'll end up with a different set of elements than if we take Set B and subtract Set A.
+
         Set<Contact> AMinusB=new HashSet<>(emailContacts);
         AMinusB.removeAll(phoneContacts);
         printData("(A - B) emails (A) - phones (B)",AMinusB);
 
+        Set<Contact> BMinusA=new HashSet<>(phoneContacts);
+        BMinusA.removeAll(emailContacts);
+        printData("(B - A) phones (A) - emails (B)",BMinusA);
+
+
+        //set symmetric difference.
+        //This is really the union of the two asymmetric set differences.
+        //You can think of the set symmetric difference, as the elements from all sets that don't intersect.
+
+        Set<Contact> symmetricDiff=new HashSet<>(AMinusB);
+        symmetricDiff.addAll(BMinusA);
+        printData("Symmetric difference: phones and emails",symmetricDiff);
+
+        //The other way to get these same set of elements,
+        //is to take the unioned set, and subtract the intersected set.
+
+        Set<Contact> symmetricDiff2=new HashSet<>(unionAB);
+        symmetricDiff2.removeAll(intersectAB);
+        printData("Symmetric difference: phones and emails",symmetricDiff2);
+
     }
     public static void printData(String header, Collection<Contact> contacts){
-        System.out.println("_".repeat(75));
+        System.out.println("__________________________________________________");
         System.out.println(header);
-        System.out.println("_".repeat(75));
+        System.out.println("__________________________________________________");
         contacts.forEach(System.out::println);
     }
 }

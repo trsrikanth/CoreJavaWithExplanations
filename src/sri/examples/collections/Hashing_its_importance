@@ -1,0 +1,31 @@
+Hashset and HashMap, are based on hash codes of objects.
+Since sets are unique beause they don't support duplicates, adding an element always incurs the cost of
+checking for a match.
+If your set is large or very large, this becomes a costly operation, O(n), or linear time,
+if you remember the Big O notations.
+A mechanism to reduce this cost, is to introduced something called hashing.
+If we created two buckets of elements, and the element could consistently identify which bucket it was stored in,
+then the lookup could be reduced by half.
+If we created four buckets, we could reduce the cost by quarter.
+A hashed collection will optimally create a limited set of buckets, to provide an even distribution of the objects
+across the buckets in a full set.
+A hash code can be a valid integer, so it could be one of the 4.2 billion valid numbers.
+If your collection only contains 100,000 elements, you don't want to back it with a storage mechanism of 4 billion
+possible placeholders.
+And you don't want to have to iterate through 100,000 elements one at a time to find a match or duplicate.
+A hashing mechanism will take an integer hash code, and a capacity declaration which specifies the number of buckets
+to distribute the objects over.
+It then translates the range of hash codes into a range of bucket identifiers.
+Hashed implementations use a combination of the hash code and other means, to provide the most efficient bucketing
+system, to achieve this uniform distribution of the objects.
+To understand hashing in java, we need to first understand the equality of objects.
+There are two methods from Object class equals and hashCode
+== means for objects ? it means two variables have the same reference to a single object in memory.
+Because both references are pointing to the same object, then this is obviously a good equality test.
+Objects can be considered equal in other instances as well, if their attribute values are equal.
+The String class overrides this method, so that it compares all the characters in each String,
+to confirm that two Strings are equal.
+========
+A Hash set is a class that implements the Set interface, and track duplicates by their hash code.
+Most collections allow the creation of another collection type, by passing a different collection to the constructor.
+ 
