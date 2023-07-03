@@ -1,8 +1,8 @@
-package sri.examples.collections.sets_maps;
+package sri.examples.collections.sets;
 
 
-import sri.examples.collections.sets_maps.basic_setup.Contact;
-import sri.examples.collections.sets_maps.basic_setup.ContactData;
+import sri.examples.collections.sets.basic_setup.Contact;
+import sri.examples.collections.sets.basic_setup.ContactData;
 
 import java.util.Collection;
 import java.util.HashSet;

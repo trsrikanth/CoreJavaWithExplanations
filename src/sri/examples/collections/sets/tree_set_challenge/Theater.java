@@ -1,4 +1,4 @@
-package sri.examples.collections.sets_maps.tree_set_challenge;
+package sri.examples.collections.sets.tree_set_challenge;
 
 import java.util.NavigableSet;
 import java.util.Set;

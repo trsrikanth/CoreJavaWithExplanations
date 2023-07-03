@@ -1,4 +1,4 @@
-package sri.examples.collections.sets_maps.basic_setup;
+package sri.examples.collections.sets.basic_setup;
 
 import java.util.Arrays;
 import java.util.HashSet;
