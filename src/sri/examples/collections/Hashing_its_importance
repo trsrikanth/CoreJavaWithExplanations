@@ -1,5 +1,5 @@
 Hashset and HashMap, are based on hash codes of objects.
-Since sets are unique beause they don't support duplicates, adding an element always incurs the cost of
+Since sets are unique because they don't support duplicates, adding an element always incurs the cost of
 checking for a match.
 If your set is large or very large, this becomes a costly operation, O(n), or linear time,
 if you remember the Big O notations.

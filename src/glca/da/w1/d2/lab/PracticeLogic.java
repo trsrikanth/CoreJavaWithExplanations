@@ -14,7 +14,7 @@ public class PracticeLogic {
 		int num1 = -1320;
 		int num2 = 243220;
 		char[] ch;
-		String statement = "This& is a^ test";
+		String statement = "This& is a test";
 
 //		2. Logic for sub question 1
 		System.out.println("Before Conversion \nnum1 = "+num1+", num2 = "+num2);

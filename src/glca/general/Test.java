@@ -21,7 +21,7 @@ public class Test {
 
         //printing v
 
-        int nuberofRows=12;
+        int nuberofRows=6;
         int numberofCols=(nuberofRows*2)-1;
 
         System.out.println("*".repeat(numberofCols));
