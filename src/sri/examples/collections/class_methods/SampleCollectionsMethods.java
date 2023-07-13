@@ -53,8 +53,8 @@ public class SampleCollectionsMethods {
         it doesn't return a copy of your list. Elements are being assigned to the
         existing destination list, vs.a copy of the list being made.
          */
-        Collections.copy(cards,kingsOfClubs);
-        Card.printDeck(cards,"Card Collection with kings copied",2);
+        //Collections.copy(cards,kingsOfClubs);
+        //Card.printDeck(cards,"Card Collection with kings copied",2);
 
         /*
         If you want a full list copy, you'd use the List dot copy of method, so let me revisit
@@ -88,10 +88,14 @@ public class SampleCollectionsMethods {
         List<Card> tens=new ArrayList<>(deck.subList(16,20));
         Card.printDeck(tens,"Tens in deck",1);
 
+        //Collections.shuffle(deck); // ---- shuffle and see the result of indexOfSubList & containsAll
         int subListIndex=Collections.indexOfSubList(deck,tens);
         System.out.println("Sublist index for tens "+subListIndex);
         System.out.println("Contains = "+deck.containsAll(tens));
 
+        //the disjoint method. This method returns true if the two lists have no elements in common.
+        // This method takes two collections, and returns true if the two collections don't share elements,
+        // or false if they do.
         boolean disjoint=Collections.disjoint(deck,tens);
         System.out.println("disjoint = "+disjoint);
 
@@ -103,6 +107,18 @@ public class SampleCollectionsMethods {
         //===========================================
 
         //Binary search -- should be sorted before using it
+
+        //Again, like the Arrays class, that gave us a binarySearch method for arrays, the Collections method,
+        //supports a binary search method for lists. Both methods require the elements to be sorted first,
+        //and neither guarantees what index is returned if you've got duplicates.
+        //The binarySearch method on Collections is overloaded, like the sort method.
+        //I can pass a List of Comparable elements, or I can pass a list, with a separate Comparator,
+        //which should match the way the elements are sorted. Both methods take an element, the element
+        //that will be searched for, which should be the same type as the elements in the List passed.
+
+        //This is important. Your list must be sorted, before you can execute binarySearch on it.
+        // If I'm passing a comparator, my list has to be sorted that way before executing this method.
+
         deck.sort(sortingAlgorithm);
         Card tenCardOfHearts = Card.getNumericCard(Card.Suit.HEART,10);
         int foundIndex=Collections.binarySearch(deck,tenCardOfHearts,sortingAlgorithm);
