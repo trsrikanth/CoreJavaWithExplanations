@@ -29,7 +29,9 @@ public class SwitchExamples {
 
     The case keyword, as shown here, is used with the switch statement for comparison.
 
-    switch value, case x, essentially means, in the case that value equals x, execute this code. If it doesn't, then move on to check the next case. The break keyword tells the switch statement to terminate any further checks. the default keyword means if none of the above cases were true, execute this code. 
+    switch value, case x, essentially means, in the case that value equals x, execute this code. If it doesn't, then move on to check the next case. The break keyword tells the switch statement to terminate any further checks. the default keyword means if none of the above cases were true, execute this code.
+
+    So a switch is good to use, if we're actually testing the same variable, and we want to test different values for that variable.
 
     switch statement, is that it can only be used  with a limited type of variable data types.
     We can only use half of the primitives, byte, short,int and char, and their corresponding wrappers.

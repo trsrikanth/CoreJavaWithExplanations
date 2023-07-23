@@ -8,4 +8,5 @@ public class ChildClass extends BaseClass {
         System.out.println("[ChildClass.optionalMethod]: Some extra stuff here");
         super.optionalMethod();
     }
-}
+
+   }
